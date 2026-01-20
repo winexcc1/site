@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Автошкола "Баринов" - Официальное оформление водительских прав в РФ</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Подключаем шрифт Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-primary: #1a56db;
+            --color-primary-dark: #1e429f;
+            --color-secondary: #1e40af;
+            --color-accent: #2563eb;
+            --color-success: #059669;
+            --color-whatsapp: #25D366;
+            --color-telegram: #0088cc;
+            --color-white: #ffffff;
+            --color-light: #f8fafc;
+            --color-gray-100: #f1f5f9;
+            --color-gray-200: #e2e8f0;
+            --color-gray-300: #cbd5e1;
+            --color-gray-700: #374151;
+            --color-gray-800: #1f2937;
+            --color-gray-900: #111827;
+            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 6px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            --radius-sm: 8px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--color-white);
+            color: var(--color-gray-800);
+            line-height: 1.6;
+            font-weight: 400;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--color-gray-900);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Фиксированная шапка - ПРЕЖНЯЯ ВЕРСИЯ для ПК */
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            padding: 16px 0;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 12px 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .header-logo-img {
+            width: 100px;
+            height: 100px;
+            border-radius: var(--radius);
+            object-fit: cover;
+            border: 2px solid var(--color-primary);
+        }
+
+        .header-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-logo-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-gray-900);
+        }
+
+        .header-logo-subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-gray-700);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: var(--color-gray-700);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: var(--color-primary);
+            outline: none;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link:focus::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Герой-секция */
+        .hero-section {
+            background: linear-gradient(135deg, var(--color-light) 0%, var(--color-white) 100%);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 560px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--color-primary);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--color-gray-900);
+            line-height: 1.1;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: var(--color-gray-700);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        /* Статистика */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid var(--color-gray-100);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .stat-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--color-gray-700);
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            gap: 10px;
+        }
+
+        .btn:focus {
+            outline: 3px solid rgba(37, 99, 235, 0.3);
+            outline-offset: 2px;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-telegram {
+            background-color: var(--color-telegram);
+            color: var(--color-white);
+        }
+
+        .btn-telegram:hover,
+        .btn-telegram:focus {
+            background-color: #0077b5;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--color-whatsapp);
+            color: var(--color-white);
+        }
+
+        .btn-whatsapp:hover,
+        .btn-whatsapp:focus {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-outline:hover,
+        .btn-outline:focus {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-lg {
+            padding: 18px 40px;
+            font-size: 18px;
+            border-radius: var(--radius);
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: var(--radius-sm);
+        }
+
+        /* Особенности */
+        .features-section {
+            padding: 80px 0;
+            background-color: var(--color-white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--color-gray-900);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: var(--color-gray-700);
+            max-width: 640px;
+            margin: 0 auto 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--color-gray-100);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--color-primary);
+            font-size: 28px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--color-gray-900);
+        }
+
+        .feature-text {
+            color: var(--color-gray-700);
+            line-height: 1.6;
+        }
+
+        /* Услуги */
+        .services-section {
+            padding: 80px 0;
+            background-color: var(--color-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Всегда 3 колонки как на ПК */
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--color-gray-100);
+            opacity: 0;
+            transform: translateY(20px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card.animated {
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .service-icon {
+            min-width: 52px;
+            height: 52px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .service-title-wrapper {
+            flex: 1;
+        }
+
+        .service-category {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        .service-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--color-gray-900);
+            line-height: 1.3;
+        }
+
+        .service-description {
+            color: var(--color-gray-700);
+            margin-bottom: 22px;
+            line-height: 1.5;
+            font-size: 15px;
+            flex: 1;
+        }
+
+        /* Как мы работаем */
+        .process-section {
+            padding: 80px 0;
+            background-color: var(--color-white);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Всегда 4 колонки как на ПК */
+            gap: 25px;
+            margin-top: 40px;
+            counter-reset: step;
+        }
+
+        .process-step {
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--color-gray-100);
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .process-step.animated {
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .process-step:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .process-step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            top: -16px;
+            left: 24px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            z-index: 1;
+        }
+
+        .step-icon {
+            width: 52px;
+            height: 52px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            color: var(--color-primary);
+            font-size: 22px;
+        }
+
+        .step-title {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--color-gray-900);
+        }
+
+        .step-description {
+            color: var(--color-gray-700);
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        /* Гарантии */
+        .guarantees-section {
+            padding: 80px 0;
+            background-color: var(--color-light);
+        }
+
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Всегда 3 колонки как на ПК */
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .guarantee-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--color-gray-100);
+            border-top: 4px solid var(--color-primary);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .guarantee-card.animated {
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .guarantee-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .guarantee-icon {
+            width: 52px;
+            height: 52px;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+            font-size: 22px;
+        }
+
+        .guarantee-title {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--color-gray-900);
+        }
+
+        .guarantee-description {
+            color: var(--color-gray-700);
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        /* Отзывы */
+        .reviews-section {
+            padding: 80px 0;
+            background-color: var(--color-white);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Всегда 3 колонки как на ПК */
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .review-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--color-gray-100);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .review-card.animated {
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .review-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--color-gray-100);
+            flex-shrink: 0;
+        }
+
+        .review-author-wrapper {
+            flex: 1;
+        }
+
+        .review-author {
+            font-weight: 700;
+            color: var(--color-gray-900);
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .review-location {
+            font-size: 14px;
+            color: var(--color-gray-700);
+        }
+
+        .review-text {
+            color: var(--color-gray-700);
+            margin-bottom: 18px;
+            line-height: 1.5;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .review-rating {
+            color: #fbbf24;
+            font-size: 17px;
+        }
+
+        /* CTA секция */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--color-white);
+        }
+
+        .cta-text {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Футер */
+        footer {
+            background-color: var(--color-gray-900);
+            color: var(--color-white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Всегда 3 колонки как на ПК */
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--color-white);
+        }
+
+        .footer-section p {
+            margin-bottom: 12px;
+            opacity: 0.8;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius);
+            object-fit: cover;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--color-white);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 20px;
+        }
+
+        .social-link:hover,
+        .social-link:focus {
+            background-color: var(--color-primary);
+            transform: translateY(-3px);
+            outline: none;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        /* Анимации */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .counting {
+            animation: countUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        /* Адаптивность ТОЛЬКО для уменьшения размеров */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .services-grid,
+            .guarantees-grid,
+            .reviews-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            
+            .service-card,
+            .process-step,
+            .guarantee-card,
+            .review-card {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero-text {
+                max-width: 100%;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .services-grid,
+            .guarantees-grid,
+            .reviews-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+            
+            .service-card,
+            .process-step,
+            .guarantee-card,
+            .review-card {
+                padding: 20px;
+            }
+            
+            .service-title,
+            .step-title,
+            .guarantee-title {
+                font-size: 18px;
+            }
+            
+            .service-description,
+            .step-description,
+            .guarantee-description,
+            .review-text {
+                font-size: 14px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Мобильное меню */
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--color-gray-700);
+                font-size: 24px;
+                cursor: pointer;
+                padding: 8px;
+                z-index: 1001;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .header-cta .btn:not(.btn-sm) {
+                display: none;
+            }
+            
+            .header-logo-title {
+                font-size: 20px;
+            }
+            
+            .header-logo-subtitle {
+                font-size: 12px;
+            }
+            
+            .header-logo-img {
+                width: 50px;
+                height: 50px;
+            }
+            
+            /* Сетки на мобильных - ВСЕГДА 1 КОЛОНКА */
+            .services-grid,
+            .guarantees-grid,
+            .reviews-grid,
+            .process-steps,
+            .features-grid,
+            .footer-content,
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .hero-section {
+                padding: 120px 0 60px;
+            }
+            
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .hero-description {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .section-subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+            
+            .hero-cta,
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .stat-card {
+                padding: 20px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+            
+            .feature-card,
+            .service-card,
+            .process-step,
+            .guarantee-card,
+            .review-card {
+                padding: 24px;
+            }
+            
+            .cta-title {
+                font-size: 32px;
+            }
+            
+            .cta-text {
+                font-size: 18px;
+            }
+            
+            /* Мобильное меню стили */
+            .mobile-menu-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            .mobile-menu-overlay.active {
+                display: block;
+                opacity: 1;
+            }
+
+            .mobile-menu-content {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100%;
+                background-color: var(--color-white);
+                z-index: 1000;
+                transform: translateX(100%);
+                transition: transform 0.3s;
+                padding: 80px 24px 40px;
+                overflow-y: auto;
+            }
+
+            .mobile-menu-content.active {
+                transform: translateX(0);
+            }
+
+            .mobile-nav-menu {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .mobile-nav-link {
+                color: var(--color-gray-800);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 18px;
+                padding: 12px 0;
+                border-bottom: 1px solid var(--color-gray-200);
+                transition: var(--transition);
+            }
+
+            .mobile-nav-link:hover,
+            .mobile-nav-link:focus {
+                color: var(--color-primary);
+            }
+
+            .mobile-menu-cta {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 28px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .header-logo-title {
+                font-size: 18px;
+            }
+            
+            .cta-title {
+                font-size: 28px;
+            }
+            
+            .cta-text {
+                font-size: 16px;
+            }
+            
+            .btn-lg {
+                padding: 16px 24px;
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+            
+            .nav-menu {
+                display: flex;
+            }
+            
+            .header-cta .btn:not(.btn-sm) {
+                display: inline-flex;
+            }
+        }
+
+        /* Улучшенные стили для мобильной навигации */
+        .mobile-menu-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-white);
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1001;
+            box-shadow: var(--shadow);
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            color: var(--color-gray-700);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* Предотвращение горизонтального скролла */
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        img, svg {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Фиксированная шапка -->
+    <header class="fixed-header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="#hero" class="header-logo" aria-label="Автошкола Баринов - главная">
+                    <img src="logo.png" alt="Логотип автошколы Баринов" class="header-logo-img">
+                    <div class="header-logo-text">
+                        <div class="header-logo-title">Автошкола "Баринов"</div>
+                    </div>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="nav-menu" aria-label="Основная навигация" id="desktopNav">
+                    <a href="#services" class="nav-link" aria-label="Наши услуги">Наши услуги</a>
+                    <a href="#process" class="nav-link" aria-label="Как мы работаем">Как мы работаем</a>
+                    <a href="#guarantees" class="nav-link" aria-label="Наши гарантии">Наши гарантии</a>
+                    <a href="#reviews" class="nav-link" aria-label="Отзывы">Отзывы</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu-content" id="mobileMenuContent">
+        <nav class="mobile-nav-menu" aria-label="Мобильная навигация">
+            <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">Главная</a>
+            <a href="#services" class="mobile-nav-link" onclick="closeMobileMenu()">Наши услуги</a>
+            <a href="#process" class="mobile-nav-link" onclick="closeMobileMenu()">Как мы работаем</a>
+            <a href="#guarantees" class="mobile-nav-link" onclick="closeMobileMenu()">Наши гарантии</a>
+            <a href="#reviews" class="mobile-nav-link" onclick="closeMobileMenu()">Отзывы</a>
+            <a href="#contacts" class="mobile-nav-link" onclick="closeMobileMenu()">Контакты</a>
+        </nav>
+        
+        <div class="mobile-menu-cta">
+            <a href="https://t.me/barinov_prav" class="btn btn-telegram btn-block" target="_blank" onclick="closeMobileMenu()">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+            <a href="https://wa.me/79053955365" class="btn btn-whatsapp btn-block" target="_blank" onclick="closeMobileMenu()">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Герой-секция -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Официально. Быстро. Конфиденциально.</span>
+                    <h1 id="hero-title" class="hero-title">Оформление водительских прав в РФ — быстро и легально</h1>
+                    <p class="hero-description">Мы оформляем и восстанавливаем водительские удостоверения через официальные каналы. Бесплатная консультация, оплата — только после проверки документов.</p>
+                    
+                    <div class="hero-cta">
+                        <a href="https://t.me/barinov_prav" class="btn btn-telegram btn-lg" target="_blank" aria-label="Написать в Telegram">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://wa.me/79053955365" class="btn btn-whatsapp btn-lg" target="_blank" aria-label="Написать в WhatsApp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number" id="counter-issued" aria-label="1251 выдано прав">1251+</div>
+                            <div class="stat-text">Выдано прав</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="counter-restored" aria-label="288 восстановлено прав">288+</div>
+                            <div class="stat-text">Восстановлено прав</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="counter-guarantee" aria-label="100% гарантия качества">100%</div>
+                            <div class="stat-text">Гарантия качества</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-title">Быстрое оформление</h3>
+                        <p class="feature-text">От заявки до доставки документов — в рамках оговоренных сроков.</p>
+                        <a href="#contacts" class="btn btn-outline btn-sm" style="margin-top: 16px;">Бесплатная консультация</a>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="feature-title">Работаем по всей РФ</h3>
+                        <p class="feature-text">Доставка курьером по адресу в любом регионе России.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services-section" aria-labelledby="services-title">
+        <div class="container">
+            <h2 class="section-title" id="services-title">Наши услуги</h2>
+            <p class="section-subtitle">Полный спектр услуг по оформлению водительских документов</p>
+            
+            <div class="services-grid">
+                <!-- Категория A, A1 -->
+                <div class="service-card" role="article" aria-labelledby="service-a-title">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-motorcycle"></i>
+                        </div>
+                        <div class="service-title-wrapper">
+                            <div class="service-category">Категория A, A1</div>
+                            <h3 class="service-title" id="service-a-title">Мотоциклы и мототранспорт</h3>
+                        </div>
+                    </div>
+                    <p class="service-description">Мотоциклы, мотороллеры и другие мототранспортные средства. Оформление и восстановление.</p>
+                    <a href="https://t.me/barinov_prav" class="btn btn-primary" target="_blank" aria-label="Связаться по поводу категории A, A1">Связаться</a>
+                </div>
+                
+                <!-- Категория B, B1 -->
+                <div class="service-card" role="article" aria-labelledby="service-b-title">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="service-title-wrapper">
+                            <div class="service-category">Категория B, B1</div>
+                            <h3 class="service-title" id="service-b-title">Легковые автомобили</h3>
+                        </div>
+                    </div>
+                    <p class="service-description">Легковые автомобили, трициклы и квадрициклы. Быстрый процесс оформления.</p>
+                    <a href="https://t.me/barinov_prav" class="btn btn-primary" target="_blank" aria-label="Связаться по поводу категории B, B1">Связаться</a>
+                </div>
+                
+                <!-- Категория C, C1 -->
+                <div class="service-card" role="article" aria-labelledby="service-c-title">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="service-title-wrapper">
+                            <div class="service-category">Категория C, C1</div>
+                            <h3 class="service-title" id="service-c-title">Грузовые автомобили</h3>
+                        </div>
+                    </div>
+                    <p class="service-description">Грузовые автомобили свыше 3,5 тонн — оформление для работы и трудоустройства.</p>
+                    <a href="https://t.me/barinov_prav" class="btn btn-primary" target="_blank" aria-label="Связаться по поводу категории C, C1">Связаться</a>
+                </div>
+                
+                <!-- Категория CE -->
+                <div class="service-card" role="article" aria-labelledby="service-ce-title">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                        <div class="service-title-wrapper">
+                            <div class="service-category">Категория CE</div>
+                            <h3 class="service-title" id="service-ce-title">Грузовики с прицепом</h3>
+                        </div>
+                    </div>
+                    <p class="service-description">Грузовые автомобили с прицепом массой свыше 750 кг. Полное оформление документов.</p>
+                    <a href="https://t.me/barinov_prav" class="btn btn-primary" target="_blank" aria-label="Связаться по поводу категории CE">Связаться</a>
+                </div>
+                
+                <!-- Категория D1, D -->
+                <div class="service-card" role="article" aria-labelledby="service-d-title">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <div class="service-title-wrapper">
+                            <div class="service-category">Категория D1, D</div>
+                            <h3 class="service-title" id="service-d-title">Автобусы</h3>
+                        </div>
+                    </div>
+                    <p class="service-description">Автобусы для перевозки пассажиров. Оформление всех категорий.</p>
+                    <a href="https://t.me/barinov_prav" class="btn btn-primary" target="_blank" aria-label="Связаться по поводу категории D1, D">Связаться</a>
+                </div>
+                
+                <!-- Категория D1E, DE -->
+                <div class="service-card" role="article" aria-labelledby="service-de-title">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-bus-alt"></i>
+                        </div>
+                        <div class="service-title-wrapper">
+                            <div class="service-category">Категория D1E, DE</div>
+                            <h3 class="service-title" id="service-de-title">Автобусы с прицепом</h3>
+                        </div>
+                    </div>
+                    <p class="service-description">Автобусы с прицепом массой свыше 750 кг. Полное юридическое сопровождение.</p>
+                    <a href="https://t.me/barinov_prav" class="btn btn-primary" target="_blank" aria-label="Связаться по поводу категории D1E, DE">Связаться</a>
+                </div>
+                
+                <!-- Техпаспорт TC -->
+                <div class="service-card" role="article" aria-labelledby="service-tc-title">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="service-title-wrapper">
+                            <div class="service-category">Техпаспорт TC</div>
+                            <h3 class="service-title" id="service-tc-title">Оформление техпаспорта</h3>
+                        </div>
+                    </div>
+                    <p class="service-description">Оформление и восстановление техпаспорта транспортного средства.</p>
+                    <a href="https://t.me/barinov_prav" class="btn btn-primary" target="_blank" aria-label="Связаться по поводу техпаспорта">Связаться</a>
+                </div>
+                
+                <!-- Медицинские справки -->
+                <div class="service-card" role="article" aria-labelledby="service-med-title">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="service-title-wrapper">
+                            <div class="service-category">Медицинские справки</div>
+                            <h3 class="service-title" id="service-med-title">Медсправки для ВУ</h3>
+                        </div>
+                    </div>
+                    <p class="service-description">Официальные медсправки для водительского удостоверения. Быстро и легально.</p>
+                    <a href="https://t.me/barinov_prav" class="btn btn-primary" target="_blank" aria-label="Связаться по поводу медсправок">Связаться</a>
+                </div>
+                
+                <!-- Восстановление прав -->
+                <div class="service-card" role="article" aria-labelledby="service-restore-title">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="service-title-wrapper">
+                            <div class="service-category">Восстановление прав</div>
+                            <h3 class="service-title" id="service-restore-title">Восстановление ВУ</h3>
+                        </div>
+                    </div>
+                    <p class="service-description">Помощь при утере, повреждении или лишении водительского удостоверения.</p>
+                    <a href="https://t.me/barinov_prav" class="btn btn-primary" target="_blank" aria-label="Связаться по поводу восстановления прав">Связаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как мы работаем -->
+    <section id="process" class="process-section" aria-labelledby="process-title">
+        <div class="container">
+            <h2 class="section-title" id="process-title">Как мы работаем</h2>
+            <p class="section-subtitle">Простой и прозрачный процесс оформления документов</p>
+            
+            <div class="process-steps">
+                <div class="process-step" role="article" aria-labelledby="step1-title">
+                    <div class="step-icon" aria-hidden="true">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="step-title" id="step1-title">Консультация</h3>
+                    <p class="step-description">Вы пишите нам и оставляете заявку, мы обсуждаем с вами детали и приступаем к работе.</p>
+                </div>
+                
+                <div class="process-step" role="article" aria-labelledby="step2-title">
+                    <div class="step-icon" aria-hidden="true">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="step-title" id="step2-title">Оформление</h3>
+                    <p class="step-description">Подготавливаем документы и вносим данные в официальные базы.</p>
+                </div>
+                
+                <div class="process-step" role="article" aria-labelledby="step3-title">
+                    <div class="step-icon" aria-hidden="true">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="step-title" id="step3-title">Проверка и оплата</h3>
+                    <p class="step-description">Вы проверяете документы и оплачиваете заказ.</p>
+                </div>
+                
+                <div class="process-step" role="article" aria-labelledby="step4-title">
+                    <div class="step-icon" aria-hidden="true">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="step-title" id="step4-title">Доставка</h3>
+                    <p class="step-description">Отправляем документы курьерской службой по указанному адресу.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Наши гарантии -->
+    <section id="guarantees" class="guarantees-section" aria-labelledby="guarantees-title">
+        <div class="container">
+            <h2 class="section-title" id="guarantees-title">Наши гарантии</h2>
+            <p class="section-subtitle">Мы гарантируем качество и надежность наших услуг</p>
+            
+            <div class="guarantees-grid">
+                <div class="guarantee-card" role="article" aria-labelledby="guarantee1-title">
+                    <div class="guarantee-icon" aria-hidden="true">
+                        <i class="fas fa-file-certificate"></i>
+                    </div>
+                    <h3 class="guarantee-title" id="guarantee1-title">Официальные документы</h3>
+                    <p class="guarantee-description">Все документы оформляются через официальные каналы и вносятся в базы.</p>
+                </div>
+                
+                <div class="guarantee-card" role="article" aria-labelledby="guarantee2-title">
+                    <div class="guarantee-icon" aria-hidden="true">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3 class="guarantee-title" id="guarantee2-title">Конфиденциальность</h3>
+                    <p class="guarantee-description">Полная анонимность и защита ваших персональных данных.</p>
+                </div>
+                
+                <div class="guarantee-card" role="article" aria-labelledby="guarantee3-title">
+                    <div class="guarantee-icon" aria-hidden="true">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="guarantee-title" id="guarantee3-title">Без предоплаты</h3>
+                    <p class="guarantee-description">Оплата только после проверки документов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="reviews-section" aria-labelledby="reviews-title">
+        <div class="container">
+            <h2 class="section-title" id="reviews-title">Отзывы наших клиентов</h2>
+            <p class="section-subtitle">Узнайте, что говорят о нас те, кто уже получил права</p>
+            
+            <div class="reviews-grid">
+                <div class="review-card" role="article" aria-labelledby="review1-title">
+                    <div class="review-header">
+                        <img src="photo1.png" alt="Фото Александра" class="review-photo">
+                        <div class="review-author-wrapper">
+                            <div class="review-author" id="review1-title">Александр</div>
+                            <div class="review-location">Москва</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Получил права категории B за неделю! Всё официально, без проблем. Очень доволен сервисом и скоростью оформления."</p>
+                    <div class="review-rating" aria-label="Рейтинг: 5 звезд">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="review-card" role="article" aria-labelledby="review2-title">
+                    <div class="review-header">
+                        <img src="photo2.png" alt="Фото Ирины" class="review-photo">
+                        <div class="review-author-wrapper">
+                            <div class="review-author" id="review2-title">Ирина</div>
+                            <div class="review-location">Санкт-Петербург</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Восстановила права после утери. Обратилась в автошколу Баринова, и через 3 дня всё было готово. Профессионально и без лишних вопросов!"</p>
+                    <div class="review-rating" aria-label="Рейтинг: 4.5 звезды">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="review-card" role="article" aria-labelledby="review3-title">
+                    <div class="review-header">
+                        <img src="photo3.png" alt="Фото Дмитрия" class="review-photo">
+                        <div class="review-author-wrapper">
+                            <div class="review-author" id="review3-title">Дмитрий</div>
+                            <div class="review-location">Екатеринбург</div>
+                        </div>
+                    </div>
+                    <p class="review-text">"Нужна была категория C для работы. Сделали всё быстро, документы полностью легальные. Теперь работаю водителем дальнобойщиком."</p>
+                    <div class="review-rating" aria-label="Рейтинг: 5 звезд">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA секция -->
+    <section id="contacts" class="cta-section" aria-labelledby="cta-title">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" id="cta-title">Готовы получить права?</h2>
+                <p class="cta-text">Свяжитесь с нами прямо сейчас для консультации и начала оформления документов. Мы ответим на все ваши вопросы и поможем с выбором подходящей категории прав.</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://t.me/barinov_prav" class="btn btn-telegram btn-lg" target="_blank" aria-label="Написать в Telegram для консультации">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </a>
+                    <a href="https://wa.me/79053955365" class="btn btn-whatsapp btn-lg" target="_blank" aria-label="Написать в WhatsApp для консультации">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Логотип автошколы Баринов" class="footer-logo-img">
+                        <h3>Автошкола "Баринов"</h3>
+                    </div>
+                    <p>Официальное оформление водительских прав в РФ</p>
+                    <p>Работаем по всей территории России</p>
+                    <p>Гарантия качества и легальности документов</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Свяжитесь с нами для консультации:</p>
+                    <div class="social-links">
+                        <a href="https://t.me/barinov_prav" class="social-link" target="_blank" aria-label="Написать в Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://wa.me/79053955365" class="social-link" target="_blank" aria-label="Написать в WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+79053955365" class="social-link" aria-label="Позвонить по телефону">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Важно</h3>
+                    <p>Все услуги оказываются в соответствии с законодательством РФ</p>
+                    <p>Требуется минимальный пакет документов</p>
+                    <p>Консультация бесплатна</p>
+                    <p>Оплата только после проверки документов</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Автошкола "Баринов". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Мобильное меню
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuContent = document.getElementById('mobileMenuContent');
+            
+            function openMobileMenu() {
+                mobileMenuOverlay.style.display = 'block';
+                mobileMenuContent.style.display = 'block';
+                setTimeout(() => {
+                    mobileMenuOverlay.classList.add('active');
+                    mobileMenuContent.classList.add('active');
+                }, 10);
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeMobileMenu() {
+                mobileMenuOverlay.classList.remove('active');
+                mobileMenuContent.classList.remove('active');
+                setTimeout(() => {
+                    mobileMenuOverlay.style.display = 'none';
+                    mobileMenuContent.style.display = 'none';
+                }, 300);
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+            
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            
+            // Закрытие меню при нажатии ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeMobileMenu();
+                }
+            });
+
+            // Анимация счетчиков
+            function animateCounter(element, finalValue, suffix = '') {
+                let current = 0;
+                const increment = finalValue / 30;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= finalValue) {
+                        element.textContent = finalValue + suffix;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current) + suffix;
+                    }
+                }, 30);
+            }
+
+            // Анимация при прокрутке
+            function animateOnScroll() {
+                const cards = document.querySelectorAll('.service-card, .process-step, .guarantee-card, .review-card');
+                const windowHeight = window.innerHeight;
+                
+                cards.forEach(card => {
+                    const position = card.getBoundingClientRect().top;
+                    
+                    if (position < windowHeight - 100 && !card.classList.contains('animated')) {
+                        card.classList.add('animated');
+                    }
+                });
+            }
+
+            // Анимация шапки при прокрутке
+            function updateHeader() {
+                const header = document.querySelector('.fixed-header');
+                if (window.scrollY > 20) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            }
+
+            // Плавная прокрутка
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        closeMobileMenu();
+                        
+                        const headerHeight = document.querySelector('.fixed-header').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 10;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Инициализация анимации счетчиков при попадании в область видимости
+            const observerOptions = {
+                threshold: 0.3
+            };
+
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const issued = document.getElementById('counter-issued');
+                        const restored = document.getElementById('counter-restored');
+                        const guarantee = document.getElementById('counter-guarantee');
+                        
+                        issued.classList.add('counting');
+                        restored.classList.add('counting');
+                        guarantee.classList.add('counting');
+                        
+                        setTimeout(() => {
+                            animateCounter(issued, 1251, '+');
+                            animateCounter(restored, 288, '+');
+                            guarantee.textContent = '100%';
+                        }, 300);
+                        
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const statsSection = document.getElementById('hero');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+
+            // Инициализация
+            window.addEventListener('scroll', () => {
+                updateHeader();
+                animateOnScroll();
+            });
+
+            // Первоначальный вызов
+            updateHeader();
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>
